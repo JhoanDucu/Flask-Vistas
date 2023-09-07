@@ -2,6 +2,7 @@ from flaskr import create_app
 from .modelos import db, Cancion, Album, Usuario, Medio, albumes_canciones
 from .modelos import AlbumSchema, CancionSchema, UsuarioSchema
 from flask_restful import Api
+from flask_migrate import Migrate
 from .vistas import VistaCanciones, VistaCancion, VistaAlbumes, VistaAlbum, VistaUsuarios, VistaUsuario, VistaAlbumesCanciones
 
 app = create_app("default")
@@ -10,6 +11,9 @@ app_context.push()
 
 db.init_app(app)
 db.create_all()
+
+migrate = Migrate()
+migrate.init_app(app, db)
 
 api = Api(app)
 api.add_resource(VistaCanciones,'/canciones')
