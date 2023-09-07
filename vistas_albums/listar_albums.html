@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lista de albums</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous">
+        <style>
+          .btn-dark{
+            background-color: rgb(60, 60, 60);
+          }
+          .btn-dark:hover, a:hover {
+            background-color: white;
+           color: black;
+          }
+        </style>
+    </head>
+    <body>
+      <section class="intro">
+        <div class="bg-image h-100">
+          <div class="mask d-flex align-items-center h-100">
+            <div class="container">
+              <h3 style="margin: 40px 0px;">Lista de albums</h3>
+              <br>
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <div class="card bg-dark shadow-2-strong">
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table table-dark table-borderless mb-0">
+                          <thead>
+                            <tr style="border-bottom: 1px solid gray">
+                              <th scope="col">Id</th>
+                              <th scope="col">Titulo</th>
+                              <th scope="col">Año</th>
+                              <th scope="col">Descripción</th>
+                              <th scope="col">Medio</th>
+                              <th scope="col">Usuario</th>
+                              <th scope="col" colspan="2" style="text-align: center;">Acciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr style="font-size: 12px;">
+                              <th>1</th>
+                              <td>un album</td>
+                              <td>2020</td>
+                              <td>desc</td>
+                              <td>CD</td>
+                              <td>Juan</td>
+                              <td style="text-align: center;"><a href="./editar_album.html"><button class="btn btn-dark" style="font-size: 12px;">Editar</button></a></td>
+                              <td style="text-align: center;"><a href="./"><button class="btn btn-dark" style="font-size: 12px;">Eliminar</button></a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </body>
+</html>

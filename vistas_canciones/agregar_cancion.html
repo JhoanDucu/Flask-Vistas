@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar cancion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body class="position-absolute start-50 translate-middle" style="top: 50%;width: 70%;">
+    <h3>Agregar canción</h3>
+    <br><br>
+    <form action="" method="post">
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Titulo</label>
+            <input type="text" class="form-control" id="titulo" name="titulo">
+        </div>
+        <div class="mb-3">
+            <label for="minutos" class="form-label">Minutos de duración</label>
+            <input type="number" class="form-control" id="minutos" name="minutos">
+        </div>
+        <div class="mb-3">
+            <label for="segundos" class="form-label">Segundos de duración (adicionales)</label>
+            <input type="number" class="form-control" id="segundos" name="segundos">
+        </div>
+        <div class="mb-3">
+            <label for="interprete" class="form-label">Intérprete</label>
+            <input type="text" class="form-control" id="interprete" name="interprete">
+        </div>
+        <!-- <div class="mb-3">
+            <label for="albums" class="form-label">Albums de la cancion</label>
+            <select class="form-select" id="albums" name="albums">
+                <option selected>Seleccione el album al que pertenecerá la canción</option>
+                <option value="1">album x</option>
+                <option value="2">ajax</option>
+                <option value="3">larabel</option>
+            </select>
+        </div> -->
+        <br>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Registrar canción</button>
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
