@@ -4,8 +4,10 @@ from .modelos import AlbumSchema, CancionSchema, UsuarioSchema
 from flask_restful import Api
 from flask_migrate import Migrate
 from .vistas import VistaCanciones, VistaCancion, VistaAlbumes, VistaAlbum, VistaUsuarios, VistaUsuario, VistaAlbumesCanciones
+from flask_cors import CORS
 
 app = create_app("default")
+CORS(app)
 app_context = app.app_context()
 app_context.push()
 
@@ -25,7 +27,7 @@ api.add_resource(VistaUsuario,'/usuarios/<int:id_usuario>')
 api.add_resource(VistaAlbumesCanciones,'/canciones/albums/<int:albumes>')
 
 # Codigo prueba de que inserta y consulta datos correctamente (así como se pueden hacer más operaciones y funciona bien)
-"""
+
 with app.app_context():
     # Usuario
     Usuario_Schema = UsuarioSchema()
@@ -54,7 +56,6 @@ with app.app_context():
 
     db.session.commit()
 
-    print([Album_Schema.dumps(album) for album in Album.query.all()])
-    print([Cancion_Schema.dumps(cancion) for cancion in Cancion.query.all()])
-    print([Usuario_Schema.dumps(usuario) for usuario in Usuario.query.all()])
-"""
+    #print([Album_Schema.dumps(album) for album in Album.query.all()])
+    #print([Cancion_Schema.dumps(cancion) for cancion in Cancion.query.all()])
+    #print([Usuario_Schema.dumps(usuario) for usuario in Usuario.query.all()])
